@@ -14,6 +14,8 @@
         <module>QuizMyBatis</module>
         <module>Jdk</module>
         <module>SpringFramework</module>
+        <module>user-common</module>
+        <module>QuizMq</module>
     </modules>
 
     <properties>

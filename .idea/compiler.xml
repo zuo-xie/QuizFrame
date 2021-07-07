@@ -9,9 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Jdk" />
         <module name="SpringFramework" />
+        <module name="QuizMq" />
         <module name="QuizMyBatis" />
-        <module name="QuizFrame-biz" />
         <module name="QuizFrame-common" />
+        <module name="user-common" />
+        <module name="QuizFrame-biz" />
       </profile>
     </annotationProcessing>
   </component>
