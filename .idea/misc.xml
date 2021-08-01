@@ -7,6 +7,18 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Jdk/pom.xml" />
+        <option value="$PROJECT_DIR$/QuizFrame-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/QuizFrame-common/pom.xml" />
+        <option value="$PROJECT_DIR$/QuizMq/pom.xml" />
+        <option value="$PROJECT_DIR$/QuizMyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringFramework/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
+        <option value="$PROJECT_DIR$/user-common/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

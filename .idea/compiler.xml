@@ -3,18 +3,16 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="Jdk" />
-        <module name="SpringFramework" />
-        <module name="QuizMq" />
-        <module name="QuizMyBatis" />
-        <module name="QuizFrame-common" />
-        <module name="user-common" />
-        <module name="QuizFrame-biz" />
-      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Jdk" target="13" />
+      <module name="QuizFrame-biz" target="1.8" />
+      <module name="QuizFrame-common" target="1.8" />
+      <module name="QuizMq" target="13" />
+      <module name="QuizMyBatis" target="1.8" />
+      <module name="SpringFramework" target="1.8" />
+      <module name="SpringTest" target="1.8" />
+      <module name="user-common" target="13" />
+    </bytecodeTargetLevel>
   </component>
 </project>
