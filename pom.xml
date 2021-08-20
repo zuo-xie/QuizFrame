@@ -5,9 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.quiz.frame</groupId>
-    <artifactId>QuizFrame</artifactId>
+    <artifactId>quizFrame</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+
+    <modules>
+        <module>common</module>
+        <module>util</module>
+        <module>docker</module>
+        <module>toPay</module>
+    </modules>
 
     <properties>
         <child.version>1.0.0</child.version>
@@ -19,9 +26,16 @@
         <mysql.version>8.0.15</mysql.version>
         <spring.core.version>5.3.6</spring.core.version>
         <spring.boot.amqp.version>2.5.3</spring.boot.amqp.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -67,6 +81,7 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
             <version>${spring.boot.amqp.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
