@@ -14,6 +14,8 @@
         <module>util</module>
         <module>docker</module>
         <module>toPay</module>
+        <module>mybatis</module>
+        <module>codeGenerate</module>
     </modules>
 
     <properties>

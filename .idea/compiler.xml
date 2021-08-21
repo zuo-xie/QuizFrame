@@ -10,7 +10,9 @@
         <module name="toPay" />
         <module name="util" />
         <module name="common" />
+        <module name="codeGenerate" />
         <module name="docker" />
+        <module name="mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
