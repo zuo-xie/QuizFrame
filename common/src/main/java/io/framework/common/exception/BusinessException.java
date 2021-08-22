@@ -1,6 +1,6 @@
-package com.quiz.framework.exception;
+package io.framework.common.exception;
 
-import com.quiz.framework.common.Results;
+import io.framework.common.common.Results;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

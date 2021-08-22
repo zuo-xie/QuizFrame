@@ -5,8 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>icu.xiezuojing</groupId>
-    <artifactId>QuizFrame</artifactId>
+    <artifactId>quizFrame</artifactId>
     <version>1.0.0</version>
+
+    <modules>
+        <module>common</module>
+        <module>util</module>
+        <module>docker</module>
+        <module>toPay</module>
+        <module>mybatis</module>
+        <module>codeGenerate</module>
+    </modules>
 
     <properties>
         <child.version>1.0.0</child.version>
@@ -22,6 +31,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -67,15 +82,11 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
             <version>${spring.boot.amqp.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>${spring.boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
 

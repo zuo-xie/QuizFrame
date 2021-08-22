@@ -7,7 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="QuizFrame" />
+        <module name="toPay" />
+        <module name="util" />
+        <module name="common" />
+        <module name="codeGenerate" />
+        <module name="docker" />
+        <module name="mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

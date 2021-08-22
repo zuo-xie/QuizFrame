@@ -1,4 +1,4 @@
-package com.quiz.framework.common;
+package io.framework.common.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
