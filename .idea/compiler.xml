@@ -11,8 +11,8 @@
         <module name="util" />
         <module name="common" />
         <module name="codeGenerate" />
-        <module name="docker" />
         <module name="mybatis" />
+        <module name="docker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
