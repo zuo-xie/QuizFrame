@@ -1,16 +1,17 @@
 package io.framework.myBatis.builder;
 
 
+import io.framework.myBatis.MapperTop;
+import io.framework.myBatis.annotations.Column;
+import io.framework.myBatis.annotations.PrimaryKey;
+import io.framework.myBatis.annotations.Table;
+import io.framework.myBatis.comment.ColumnInfo;
+import io.framework.myBatis.comment.TableInfo;
+import io.framework.myBatis.config.ConfigManage;
+import io.framework.myBatis.exception.QuizMyBatisException;
+import io.framework.myBatis.injector.SqlInjector;
+
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.MapperTop;
-import mybatis.frame.annotations.Column;
-import mybatis.frame.annotations.PrimaryKey;
-import mybatis.frame.annotations.Table;
-import mybatis.frame.comment.ColumnInfo;
-import mybatis.frame.comment.TableInfo;
-import mybatis.frame.config.ConfigManage;
-import mybatis.frame.exception.QuizMyBatisException;
-import mybatis.frame.injector.SqlInjector;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.builder.BuilderException;
@@ -126,7 +127,7 @@ public class MapperAnnotationBuilder extends org.apache.ibatis.builder.annotatio
                                 //注入sql
                                 sqlInjector.inspectInject(type, myAssistant, list, tableInfo);
                             } catch (Exception e) {
-                                log.error(e.getMessage());
+
                             }
                         }
                     });

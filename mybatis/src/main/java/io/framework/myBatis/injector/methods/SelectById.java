@@ -1,9 +1,9 @@
 package io.framework.myBatis.injector.methods;
 
+import io.framework.myBatis.comment.TableInfo;
+import io.framework.myBatis.injector.AbstractMethod;
+import io.framework.myBatis.injector.SqlMethodEnums;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.comment.TableInfo;
-import mybatis.frame.injector.AbstractMethod;
-import mybatis.frame.injector.SqlMethodEnums;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.scripting.defaults.RawSqlSource;
 

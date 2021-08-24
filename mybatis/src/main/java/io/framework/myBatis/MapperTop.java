@@ -1,6 +1,6 @@
 package io.framework.myBatis;
 
-import mybatis.frame.query.QuerySqlWrapper;
+import io.framework.myBatis.query.QuerySqlWrapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

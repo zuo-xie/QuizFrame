@@ -1,12 +1,12 @@
 package io.framework.myBatis.comment;
 
 
+import io.framework.myBatis.comment.enums.MySqlDML;
+import io.framework.myBatis.exception.QuizMyBatisException;
+import io.framework.myBatis.function.CustomFunOne;
+import io.framework.myBatis.function.CustomFunTwo;
+import io.framework.myBatis.util.MyBatisStringPool;
 import lombok.Data;
-import mybatis.frame.comment.enums.MySqlDML;
-import mybatis.frame.exception.QuizMyBatisException;
-import mybatis.frame.function.CustomFunOne;
-import mybatis.frame.function.CustomFunTwo;
-import mybatis.frame.util.MyBatisStringPool;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.mapping.ResultMapping;
 

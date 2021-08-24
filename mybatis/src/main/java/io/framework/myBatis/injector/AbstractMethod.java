@@ -1,8 +1,8 @@
 package io.framework.myBatis.injector;
 
 
+import io.framework.myBatis.comment.TableInfo;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.comment.TableInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.builder.MapperBuilderAssistant;
 import org.apache.ibatis.executor.keygen.KeyGenerator;
@@ -41,8 +41,7 @@ public abstract class AbstractMethod {
         try {
             this.injectMappedStatement(mapperClass, tableInfo);
         } catch (Exception e) {
-            log.error("自定义方法失效");
-            log.error(e.getMessage());
+
         }
     }
 
@@ -128,7 +127,6 @@ public abstract class AbstractMethod {
                                                  String keyProperty, String keyColumn) {
         String statementName = mapperClass.getName() + "." + id;
         if (this.hasMappedStatement(statementName)) {
-            log.warn("存在" + statementName );
             return null;
         }
         boolean isSelect = false;

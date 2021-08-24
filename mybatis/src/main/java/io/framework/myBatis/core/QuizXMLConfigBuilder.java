@@ -1,7 +1,7 @@
 package io.framework.myBatis.core;
 
+import io.framework.myBatis.QuizConfiguration;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.QuizConfiguration;
 import org.apache.ibatis.builder.BaseBuilder;
 import org.apache.ibatis.builder.BuilderException;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;

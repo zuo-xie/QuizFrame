@@ -30,6 +30,13 @@
         <spring.boot.amqp.version>2.5.3</spring.boot.amqp.version>
         <lombok.version>1.18.16</lombok.version>
         <mybatis.version>3.5.6</mybatis.version>
+        <quiz.version>2.0.0</quiz.version>
+        <apache.lang.version>3.12.0</apache.lang.version>
+        <spring.comtext.version>4.3.16.RELEASE</spring.comtext.version>
+        <spring.boot.autoconfigure>1.5.12.RELEASE</spring.boot.autoconfigure>
+        <mybatis.spring.autoconfigure>2.2.0</mybatis.spring.autoconfigure>
+        <mybatis.spring.version>2.0.6</mybatis.spring.version>
+        <slf4j.version>1.7.32</slf4j.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +45,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
 
             <dependency>
@@ -86,14 +99,49 @@
                 <version>${spring.boot.amqp.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-validation</artifactId>
                 <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.quiz.frame</groupId>
+                <artifactId>common</artifactId>
+                <version>${quiz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>icu.xiezuojing</groupId>
+                <artifactId>util</artifactId>
+                <version>${quiz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.comtext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring.boot.autoconfigure}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-autoconfigure</artifactId>
+                <version>${mybatis.spring.autoconfigure}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>icu.xiezuojing</groupId>
+                <artifactId>common</artifactId>
+                <version>${quiz.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -149,7 +197,6 @@
             <url>https://github.com/zuo-xie</url>
         </developer>
     </developers>
-
 
 
     <build>

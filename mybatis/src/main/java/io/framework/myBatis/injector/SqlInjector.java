@@ -1,6 +1,6 @@
 package io.framework.myBatis.injector;
 
-import mybatis.frame.comment.TableInfo;
+import io.framework.myBatis.comment.TableInfo;
 import org.apache.ibatis.builder.MapperBuilderAssistant;
 
 import java.util.List;

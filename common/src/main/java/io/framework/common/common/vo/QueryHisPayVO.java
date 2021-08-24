@@ -1,5 +1,6 @@
 package io.framework.common.common.vo;
 
+
 import lombok.Data;
 
 @Data

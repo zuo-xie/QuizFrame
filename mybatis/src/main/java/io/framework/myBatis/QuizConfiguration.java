@@ -20,14 +20,14 @@ import java.util.Set;
 @Getter
 public class QuizConfiguration extends Configuration {
 
-    protected final mybatis.frame.QuizMapperRegistry quizMapperRegistry;
+    protected final QuizMapperRegistry quizMapperRegistry;
 
     protected final Set<String> quizLoadedResources = new HashSet<>();
 
     private final boolean useDeprecatedExecutor = true;
 
     public QuizConfiguration() {
-        this.quizMapperRegistry = new mybatis.frame.QuizMapperRegistry(this);
+        this.quizMapperRegistry = new QuizMapperRegistry(this);
     }
 
     @Override

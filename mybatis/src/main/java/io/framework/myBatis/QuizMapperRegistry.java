@@ -1,10 +1,10 @@
 package io.framework.myBatis;
 
 
+import io.framework.myBatis.binding.QuizMapperProxyFactory;
+import io.framework.myBatis.builder.MapperAnnotationBuilder;
+import io.framework.myBatis.exception.QuizMyBatisException;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.binding.QuizMapperProxyFactory;
-import mybatis.frame.builder.MapperAnnotationBuilder;
-import mybatis.frame.exception.QuizMyBatisException;
 import org.apache.ibatis.binding.MapperRegistry;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
@@ -37,7 +37,6 @@ public class QuizMapperRegistry extends MapperRegistry {
         if (type.isInterface()) {
             //是否存在
             if (hasMapper(type)) {
-                log.error("{}存在", type.getName());
                 return;
             }
             //用于判断是否注入完成

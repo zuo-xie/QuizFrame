@@ -1,8 +1,8 @@
 package io.framework.myBatis.injector.methods;
 
-import mybatis.frame.comment.TableInfo;
-import mybatis.frame.injector.AbstractMethod;
-import mybatis.frame.injector.SqlMethodEnums;
+import io.framework.myBatis.comment.TableInfo;
+import io.framework.myBatis.injector.AbstractMethod;
+import io.framework.myBatis.injector.SqlMethodEnums;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 

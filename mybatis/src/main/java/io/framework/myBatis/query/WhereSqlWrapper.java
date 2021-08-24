@@ -1,6 +1,6 @@
 package io.framework.myBatis.query;
 
-import mybatis.frame.query.sqlSnippet.SqlSnippet;
+import io.framework.myBatis.query.sqlSnippet.SqlSnippet;
 
 import java.util.ArrayList;
 import java.util.Collection;

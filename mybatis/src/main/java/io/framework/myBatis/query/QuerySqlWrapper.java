@@ -1,12 +1,12 @@
 package io.framework.myBatis.query;
 
+import io.framework.myBatis.annotations.Column;
+import io.framework.myBatis.function.SFuntion;
+import io.framework.myBatis.query.sqlSnippet.HavingSqlSnippet;
+import io.framework.myBatis.query.sqlSnippet.SqlSnippet;
+import io.framework.myBatis.query.sqlSnippet.WhereSqlSnippet;
+import io.framework.myBatis.util.MyBatisStringPool;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.annotations.Column;
-import mybatis.frame.function.SFuntion;
-import mybatis.frame.query.sqlSnippet.HavingSqlSnippet;
-import mybatis.frame.query.sqlSnippet.SqlSnippet;
-import mybatis.frame.query.sqlSnippet.WhereSqlSnippet;
-import mybatis.frame.util.MyBatisStringPool;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -51,7 +51,6 @@ public class QuerySqlWrapper<T> extends AbsSqlWrapper<T, SFuntion<T, ?>, QuerySq
             }
 
         } catch (Exception e) {
-            log.error(e.getMessage());
             return "";
         }
         return sqlField;

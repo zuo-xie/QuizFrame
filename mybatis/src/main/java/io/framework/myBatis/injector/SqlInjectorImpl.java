@@ -1,8 +1,8 @@
 package io.framework.myBatis.injector;
 
+import io.framework.myBatis.comment.TableInfo;
+import io.framework.myBatis.exception.QuizMyBatisException;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.comment.TableInfo;
-import mybatis.frame.exception.QuizMyBatisException;
 import org.apache.ibatis.builder.MapperBuilderAssistant;
 
 import java.util.List;

@@ -1,10 +1,10 @@
 package io.framework.myBatis.spring;
 
 
+import io.framework.myBatis.config.ConfigManage;
+import io.framework.myBatis.core.QuizXMLConfigBuilder;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import mybatis.frame.config.ConfigManage;
-import mybatis.frame.core.QuizXMLConfigBuilder;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.cache.Cache;
 import org.apache.ibatis.executor.ErrorContext;
@@ -131,6 +131,11 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
         return null;
     }
 
+    @Override
+    public boolean isSingleton() {
+        return false;
+    }
+
     /**
      * Bean初始化方法  初始化  SqlSessionFactory
      */
@@ -164,7 +169,7 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
             quizXMLConfigBuilder = new QuizXMLConfigBuilder(this.configLocation.getInputStream(), null, this.configurationProperties);
             targetConfiguration = quizXMLConfigBuilder.getConfiguration();
         } else {
-            log.debug("quizConfiguration 未被注入 使用默认 Configuration");
+
             targetConfiguration = ConfigManage.getInstance().getConfiguration();
             Optional.ofNullable(this.configurationProperties).ifPresent(targetConfiguration::setVariables);
         }
@@ -183,16 +188,11 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
         if (!isEmpty(this.typeAliases)) {
             Stream.of(this.typeAliases).forEach(typeAlias -> {
                 targetConfiguration.getTypeAliasRegistry().registerAlias(typeAlias);
-                log.debug("注册别名为 ： '{}' ", typeAlias);
-
             });
         }
 
         if (!isEmpty(this.plugins)) {
-            Stream.of(this.plugins).forEach(plugin -> {
-                targetConfiguration.addInterceptor(plugin);
-                log.debug("注册插件 ： '{}' ", plugin);
-            });
+            Stream.of(this.plugins).forEach(targetConfiguration::addInterceptor);
         }
 
         if (hasLength(this.typeHandlersPackage)) {
@@ -204,7 +204,7 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
         if (!isEmpty(this.typeHandlers)) {
             Stream.of(this.typeHandlers).forEach(typeHandler -> {
                 targetConfiguration.getTypeHandlerRegistry().register(typeHandler);
-                log.debug("注册类型处理器 ：'{}' ", typeHandler);
+
             });
         }
 
@@ -213,7 +213,6 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
         if (!isEmpty(this.scriptingLanguageDrivers)) {
             Stream.of(this.scriptingLanguageDrivers).forEach(languageDriver -> {
                 targetConfiguration.getLanguageRegistry().register(languageDriver);
-                log.debug("Registered scripting language driver: '{}' ", languageDriver);
             });
         }
         Optional.ofNullable(this.defaultScriptingLanguageDriver)
@@ -223,7 +222,6 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
             try {
                 targetConfiguration.setDatabaseId(this.databaseIdProvider.getDatabaseId(this.dataSource));
             } catch (SQLException e) {
-                throw new NestedIOException("Failed getting a databaseId", e);
             }
         }
 
@@ -232,7 +230,6 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
         if (quizXMLConfigBuilder != null) {
             try {
                 quizXMLConfigBuilder.parse();
-                log.debug("解析的配置文件 ： '{}'", configLocation);
             } catch (Exception ex) {
                 throw new NestedIOException("Failed to parse config resource: " + this.configLocation, ex);
             } finally {
@@ -246,7 +243,6 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
 
         if (this.mapperLocations != null) {
             if (this.mapperLocations.length == 0) {
-                log.warn("指定了属性“ mapperLocations”，但找不到匹配的资源。");
             } else {
                 for (Resource mapperLocation : this.mapperLocations) {
                     if (mapperLocation == null) {
@@ -261,11 +257,9 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
                     } finally {
                         ErrorContext.instance().reset();
                     }
-                    log.debug("解析的映射文件 ：'{}'", mapperLocation);
                 }
             }
         } else {
-            log.debug("为指定属性  mapperLocations");
         }
         return new QuizSqlSessionFactoryBuilder().build(targetConfiguration);
     }
@@ -285,7 +279,6 @@ public class QuizSqlSessionFactoryBean implements FactoryBean<SqlSessionFactory>
                         classes.add(clazz);
                     }
                 } catch (Throwable e) {
-                    log.warn("无法加载 ' {}'. 报错原因 {}", resource, e.toString());
                 }
             }
         }

@@ -1,6 +1,6 @@
 package io.framework.myBatis.spring;
 
-import mybatis.frame.core.QuizXMLConfigBuilder;
+import io.framework.myBatis.core.QuizXMLConfigBuilder;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 

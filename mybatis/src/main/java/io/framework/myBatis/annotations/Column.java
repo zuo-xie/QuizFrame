@@ -1,6 +1,6 @@
 package io.framework.myBatis.annotations;
 
-import mybatis.frame.type.SqlDataType;
+import io.framework.myBatis.type.SqlDataType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

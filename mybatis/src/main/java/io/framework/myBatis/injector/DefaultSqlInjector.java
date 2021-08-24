@@ -1,7 +1,7 @@
 package io.framework.myBatis.injector;
 
 
-import mybatis.frame.injector.methods.*;
+import io.framework.myBatis.injector.methods.*;
 
 import java.util.List;
 import java.util.stream.Collectors;

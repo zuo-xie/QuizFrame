@@ -1,7 +1,7 @@
 package io.framework.myBatis.query;
 
+import io.framework.myBatis.query.sqlSnippet.SqlSnippet;
 import lombok.Data;
-import mybatis.frame.query.sqlSnippet.SqlSnippet;
 
 import java.util.List;
 

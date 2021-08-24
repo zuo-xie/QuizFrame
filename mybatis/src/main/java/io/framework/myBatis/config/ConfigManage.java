@@ -1,10 +1,10 @@
 package io.framework.myBatis.config;
 
+import io.framework.myBatis.QuizConfiguration;
+import io.framework.myBatis.config.idConfig.IdGenerator;
+import io.framework.myBatis.injector.DefaultSqlInjector;
+import io.framework.myBatis.injector.SqlInjector;
 import lombok.Data;
-import mybatis.frame.QuizConfiguration;
-import mybatis.frame.config.idConfig.IdGenerator;
-import mybatis.frame.injector.DefaultSqlInjector;
-import mybatis.frame.injector.SqlInjector;
 import org.apache.ibatis.executor.keygen.KeyGenerator;
 import org.apache.ibatis.executor.keygen.NoKeyGenerator;
 import org.apache.ibatis.session.Configuration;
