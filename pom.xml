@@ -16,6 +16,7 @@
         <module>toPay</module>
         <module>mybatis</module>
         <module>codeGenerate</module>
+        <module>cache</module>
     </modules>
 
     <properties>
