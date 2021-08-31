@@ -16,6 +16,7 @@
         <module>toPay</module>
         <module>mybatis</module>
         <module>codeGenerate</module>
+        <module>workflow</module>
     </modules>
 
     <properties>
@@ -37,6 +38,7 @@
         <mybatis.spring.autoconfigure>2.2.0</mybatis.spring.autoconfigure>
         <mybatis.spring.version>2.0.6</mybatis.spring.version>
         <slf4j.version>1.7.32</slf4j.version>
+        <activiti.version>7.0.0.Beta1</activiti.version>
     </properties>
 
     <dependencyManagement>
@@ -46,13 +48,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -142,6 +142,11 @@
                 <groupId>icu.xiezuojing</groupId>
                 <artifactId>common</artifactId>
                 <version>${quiz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-dependencies</artifactId>
+                <version>${activiti.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
