@@ -17,6 +17,11 @@
       <option name="url" value="https://s01.oss.sonatype.org/content/groups/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="snapshots-repo" />
+      <option name="name" value="snapshots-repo" />
+      <option name="url" value="https://maven.aliyun.com/repository/public" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jdk18" />
       <option name="name" value="Repository for JDK 1.8 builds" />
       <option name="url" value="D:\Program Files\Java\jdk1.8.0_251" />
@@ -34,6 +39,11 @@
     <remote-repository>
       <option name="id" value="public-snapshots" />
       <option name="name" value="public-snapshots" />
+      <option name="url" value="https://maven.aliyun.com/repository/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
       <option name="url" value="https://maven.aliyun.com/repository/public" />
     </remote-repository>
     <remote-repository>

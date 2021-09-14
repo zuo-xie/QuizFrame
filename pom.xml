@@ -7,7 +7,7 @@
     <groupId>icu.xiezuojing</groupId>
     <artifactId>quizFrame</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 
     <modules>
         <module>common</module>
@@ -32,7 +32,7 @@
         <spring.boot.amqp.version>2.5.3</spring.boot.amqp.version>
         <lombok.version>1.18.16</lombok.version>
         <mybatis.version>3.5.6</mybatis.version>
-        <quiz.version>2.0.0</quiz.version>
+        <quiz.version>2.0.1</quiz.version>
         <apache.lang.version>3.12.0</apache.lang.version>
         <spring.comtext.version>4.3.16.RELEASE</spring.comtext.version>
         <spring.boot.autoconfigure>1.5.12.RELEASE</spring.boot.autoconfigure>

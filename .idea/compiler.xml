@@ -10,9 +10,6 @@
         <module name="cache" />
         <module name="util" />
         <module name="common" />
-        <module name="mybatis" />
-        <module name="toPay" />
-        <module name="codeGenerate" />
         <module name="workflow" />
         <module name="mybatis" />
         <module name="toPay" />
