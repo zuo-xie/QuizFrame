@@ -106,18 +106,16 @@ public class MapperAnnotationBuilder extends org.apache.ibatis.builder.annotatio
                         if (typeImpl.getRawType().equals(MapperTop.class)) {
                             try {
                                 Type[] typeList = typeImpl.getActualTypeArguments();
+                                //泛型的集合
                                 List<Type> types = Arrays.asList(typeList);
-
-                                for (Type type1 : types) {
-                                    list.add(Class.forName(type1.getTypeName()));
+                                for (Type type : types) {
+                                    list.add(Class.forName(type.getTypeName()));
                                 }
 
                                 Class<?> aClass = (Class<?>) types.get(0);
-                                //转化的泛型
-
+                                //转化的表
                                 TableInfo tableInfo = this.getTableInfo(aClass);
-
-                                //TODO:设置resultMaps
+                                //设置resultMap
                                 ResultMap resultMap = new ResultMap.Builder(this.configuration,
                                         type.getCanonicalName() + "." + tableInfo.getResultMapName(),
                                         tableInfo.getEntityType(),
@@ -127,23 +125,27 @@ public class MapperAnnotationBuilder extends org.apache.ibatis.builder.annotatio
                                 //注入sql
                                 sqlInjector.inspectInject(type, myAssistant, list, tableInfo);
                             } catch (Exception e) {
-
+                                log.error("异常：{}",e.getMessage());
                             }
                         }
                     });
         }
     }
 
-    private TableInfo getTableInfo(Class<?> aClass) throws Exception {
+    /**
+     * 去获取指定的表信息
+     * @param aClass 类
+     * @return 表信息包含列信息
+     */
+    private TableInfo getTableInfo(Class<?> aClass) {
         //表
         TableInfo tableInfo = new TableInfo();
         //列属性
         List<ColumnInfo> columnInfoList = new ArrayList<>();
         //获取该类的所有注解,并判断是否包含 @Table注解
         Annotation[] annotations = aClass.getAnnotations();
-        boolean b = Arrays.stream(annotations).anyMatch(v -> v.annotationType().equals(Table.class));
         //如果不包含退出
-        if (!b) {
+        if (Arrays.stream(annotations).noneMatch(v -> v.annotationType().equals(Table.class))) {
             throw new QuizMyBatisException(aClass.getName() + "不存在注解 @Table");
         }
         //类名称

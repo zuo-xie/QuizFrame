@@ -1,4 +1,4 @@
-package io.framework.myBatis.util;
+package io.framework.myBatis.type;
 
 import lombok.Getter;
 

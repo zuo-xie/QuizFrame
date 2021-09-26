@@ -22,5 +22,5 @@ public interface SqlInjector {
      * @param genericList 泛型集合
      */
     void inspectInject(Class<?> mapperClass, MapperBuilderAssistant builderAssistant,
-                       List<Class<?>> genericList, TableInfo tableInfo) throws Exception;
+                       List<Class<?>> genericList, TableInfo tableInfo);
 }

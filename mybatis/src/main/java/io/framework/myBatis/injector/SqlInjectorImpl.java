@@ -20,7 +20,7 @@ import java.util.Objects;
 public abstract class SqlInjectorImpl implements SqlInjector {
     @Override
     public void inspectInject(Class<?> mapperClass, MapperBuilderAssistant builderAssistant,
-                              List<Class<?>> genericList, TableInfo tableInfo) throws Exception {
+                              List<Class<?>> genericList, TableInfo tableInfo){
         //如果泛型不存在抛错
         if (!genericList.isEmpty()) {
             List<AbstractMethod> methodList = getMethodList(mapperClass);

@@ -54,7 +54,6 @@ public class QuizMyBatisAutowired implements InitializingBean {
      * 自动注入原理
      * @param dataSource ：数据源
      * @return 返回session工厂
-     * @throws Exception
      */
     @Bean
     @ConditionalOnMissingBean

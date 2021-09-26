@@ -5,7 +5,7 @@ import io.framework.myBatis.function.SFuntion;
 import io.framework.myBatis.query.sqlSnippet.HavingSqlSnippet;
 import io.framework.myBatis.query.sqlSnippet.SqlSnippet;
 import io.framework.myBatis.query.sqlSnippet.WhereSqlSnippet;
-import io.framework.myBatis.util.MyBatisStringPool;
+import io.framework.myBatis.type.MyBatisStringPool;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.annotation.Annotation;

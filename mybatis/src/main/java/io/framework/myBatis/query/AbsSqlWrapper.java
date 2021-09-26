@@ -4,7 +4,7 @@ package io.framework.myBatis.query;
 import io.framework.myBatis.query.sqlSnippet.HavingSqlSnippet;
 import io.framework.myBatis.query.sqlSnippet.SqlSnippet;
 import io.framework.myBatis.query.sqlSnippet.WhereSqlSnippet;
-import io.framework.myBatis.util.MyBatisStringPool;
+import io.framework.myBatis.type.MyBatisStringPool;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;

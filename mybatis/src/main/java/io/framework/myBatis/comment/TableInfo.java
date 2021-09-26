@@ -5,7 +5,7 @@ import io.framework.myBatis.comment.enums.MySqlDML;
 import io.framework.myBatis.exception.QuizMyBatisException;
 import io.framework.myBatis.function.CustomFunOne;
 import io.framework.myBatis.function.CustomFunTwo;
-import io.framework.myBatis.util.MyBatisStringPool;
+import io.framework.myBatis.type.MyBatisStringPool;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.mapping.ResultMapping;

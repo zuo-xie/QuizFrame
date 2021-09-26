@@ -3,7 +3,7 @@ package io.framework.myBatis.injector.methods;
 import io.framework.myBatis.comment.TableInfo;
 import io.framework.myBatis.injector.AbstractMethod;
 import io.framework.myBatis.injector.SqlMethodEnums;
-import io.framework.myBatis.util.MyBatisStringPool;
+import io.framework.myBatis.type.MyBatisStringPool;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 
