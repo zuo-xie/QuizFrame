@@ -29,7 +29,7 @@ public abstract class SqlInjectorImpl implements SqlInjector {
                 methodList.stream().filter(Objects::nonNull).forEach(v -> v.inject(builderAssistant,genericList.get(0),tableInfo));
             }
         } else {
-            new QuizMyBatisException("注入异常");
+           throw new QuizMyBatisException("注入异常");
         }
     }
 

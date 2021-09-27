@@ -37,37 +37,41 @@ public class ConfigManage {
     private IdGenerator idGenerator;
 
     /**
-     * sql注入器
+     * 设置sql注入器
      */
     private SqlInjector sqlInjector = new DefaultSqlInjector();
 
     /**
      * 是否自动建表
      */
+    //TODO:暂时无作用
     private Boolean buildTable = false;
 
     /**
      * 属性是否驼峰
      */
+    //TODO:暂时无作用
     private Boolean columnHump = false;
 
     /**
      * 表名称是否驼峰
      */
+    //TODO:暂时无作用
     private Boolean tableHump = false;
 
     /**
-     * 对主键的默认实现
+     * 插入数据返回主键,默认空实现
      */
     private KeyGenerator keyGenerator = new NoKeyGenerator();
 
     /**
-     *  类路径
+     * 类路径
      */
+    //TODO:暂时无作用
     private String classEntity;
 
     /**
-     * 配置数据
+     * 配置数据,默认quiz配置
      */
     private Configuration configuration = new QuizConfiguration();
 }

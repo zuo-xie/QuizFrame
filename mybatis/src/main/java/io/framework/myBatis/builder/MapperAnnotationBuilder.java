@@ -62,6 +62,9 @@ public class MapperAnnotationBuilder extends org.apache.ibatis.builder.annotatio
      */
     private final Class<?> type;
 
+    /**
+     *
+     */
     private final SqlInjector sqlInjector = ConfigManage.getInstance().getSqlInjector();
 
     public MapperAnnotationBuilder(Configuration configuration, Class<?> type) {
