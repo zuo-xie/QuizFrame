@@ -18,7 +18,6 @@ public interface IdGenerator {
 
     /**
      * 生成一个主键Id（String）
-     * @return
      */
     String sCreatorId();
 }

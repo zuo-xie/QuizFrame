@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Slf4j
 @ControllerAdvice
-public class BusinessException {
+public class BusinessException extends Exception {
     /**
      * 处理其他异常
      */

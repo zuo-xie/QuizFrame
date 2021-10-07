@@ -20,33 +20,32 @@ import java.lang.annotation.Target;
 public @interface Column {
 
     /**
-     * 字段名
+     * @return 字段名
      */
     String columnName() default "";
 
     /**
-     * 字段类型
+     * @return 字段类型
      */
     SqlDataType type() default SqlDataType.NULL;
 
     /**
-     * 是否可空
+     * @return 是否可空
      */
     String notNull() default "";
 
     /**
-     * 字段描述
+     * @return 字段描述
      */
     String comment() default "";
 
     /**
-     * 长度
+     * @return 长度
      */
     String length() default "";
 
     /**
-     * 默认值
-     * @return
+     * @return 默认值
      */
     String def() default "";
 }

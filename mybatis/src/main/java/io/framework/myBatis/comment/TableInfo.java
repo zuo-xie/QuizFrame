@@ -141,21 +141,6 @@ public class TableInfo {
                 fun);
     }
 
-    public StringBuilder notNull(String value) {
-        return null;
-    }
-
-    /**
-     * 整合成MyBatis  choose标签语句
-     *
-     * @param value 参数
-     * @return 拼接后的结果
-     */
-    public StringBuilder convertChoose(String value, CustomFunOne<StringBuilder> fun) {
-        return null;
-    }
-
-
     /***
      * 添加属性
      * @param key 属性对象
@@ -174,11 +159,10 @@ public class TableInfo {
 
     /**
      * 生成标签
-     *
      * @param labelName  标签名称
      * @param attributes 标签属性
      * @param fun        内部语句
-     * @return 例子： <a></a>
+     * @return 例子：
      */
     private StringBuilder buildLabel(String labelName, StringBuilder attributes, CustomFunOne<StringBuilder> fun) {
         return new StringBuilder()
@@ -198,6 +182,11 @@ public class TableInfo {
                 .append(MyBatisStringPool.WRAP.getType());
     }
 
+    /**
+     * 生成 script
+     * @param value :内部语句
+     * @return 例子
+     */
     public StringBuilder builderScript(String value) {
         return new StringBuilder()
                 .append(MyBatisStringPool.LEFT_ANGLE_BRACKETS.getType())
@@ -211,5 +200,30 @@ public class TableInfo {
                 .append(MyBatisStringPool.SCRIPT.getType())
                 .append(MyBatisStringPool.RIGHT_ANGLE_BRACKETS.getType())
                 .append(MyBatisStringPool.WRAP.getType());
+    }
+
+    /**
+     * 生成条件语句
+     */
+    public StringBuilder builderAllIf() {
+       return this.convertIf(MyBatisStringPool.SQL_WRAPPER.getType() +
+                MyBatisStringPool.SPACE.getType() + MyBatisStringPool.NOT_NULL.getType(), () -> {
+            StringBuilder sb = new StringBuilder();
+            sb.append(this.convertWhere(() -> {
+                StringBuilder sb1 = new StringBuilder();
+                sb1.append(this.convertIf(MyBatisStringPool.SQL_WRAPPER.getType() + MyBatisStringPool.NOT_NULL.getType(), () -> {
+                    StringBuilder sb2 = new StringBuilder();
+                    sb2.append(MyBatisStringPool.USD.getType());
+                    sb2.append(MyBatisStringPool.LEFT_BRACE.getType());
+                    sb2.append(MyBatisStringPool.SQL_WRAPPER.getType());
+                    sb2.append(MyBatisStringPool.POINT.getType());
+                    sb2.append(MyBatisStringPool.SQL_WRAPPER.getType());
+                    sb2.append(MyBatisStringPool.RIGHT_BRACE.getType());
+                    return sb2;
+                }));
+                return sb1;
+            }));
+            return sb;
+        });
     }
 }

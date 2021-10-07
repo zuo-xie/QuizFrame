@@ -34,6 +34,10 @@ public class SelectList extends AbstractMethod {
                     return sb;
                 }));
         SqlSource sqlSource = this.languageDriver.createSqlSource(this.configuration, sql, Object.class);
-        return this.addSelectMappedStatementForOther(mapperClass,selectList.getMethod(),sqlSource,tableInfo.getEntityType(),tableInfo.getResultMapName());
+        return this.addSelectMappedStatementForOther(mapperClass,
+                selectList.getMethod(),
+                sqlSource,
+                tableInfo.getEntityType(),
+                tableInfo.getResultMapName());
     }
 }

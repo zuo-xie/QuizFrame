@@ -15,12 +15,9 @@ import org.apache.ibatis.scripting.LanguageDriver;
 import org.apache.ibatis.session.Configuration;
 
 /**
- * 一些声明信息
+ * 作为通用sql语句的抽象类，包含注入方法
  * Description:  
- * date: 2021/2/10 16:54 
- *
- * @author zuo  
- * @since JDK 1.8
+ * date: 2021/2/10 16:54
  */
 @Slf4j
 public abstract class AbstractMethod {
@@ -28,7 +25,6 @@ public abstract class AbstractMethod {
     protected Configuration configuration;
     protected LanguageDriver languageDriver;
     protected MapperBuilderAssistant builderAssistant;
-
 
     /**
      * 注入自定义方法
@@ -41,14 +37,14 @@ public abstract class AbstractMethod {
         try {
             this.injectMappedStatement(mapperClass, tableInfo);
         } catch (Exception e) {
-
+            log.error(e.getMessage());
         }
     }
 
 
     /**
      * 注入自定义 MappedStatement
-     *
+     * 生成不同的sql 语句的MappedStatement
      * @param mapperClass mapper 接口
      * @param tableInfo   数据库表反射信息
      * @return MappedStatement
@@ -58,7 +54,6 @@ public abstract class AbstractMethod {
     /**
      * 获取所有表信息
      * @param tableInfo 表信息
-     * @return
      */
     protected String sqlSelectColumns(TableInfo tableInfo) throws Exception {
         return tableInfo.getAllSqlSelect();
@@ -119,7 +114,6 @@ public abstract class AbstractMethod {
      * 将sql方法添加到mapper管理器中
      * @param mapperClass 实体类
      * @param id 唯一标识
-     * @return
      */
     protected MappedStatement addMappedStatement(Class<?> mapperClass, String id, SqlSource sqlSource,
                                                  SqlCommandType sqlCommandType, Class<?> parameterType,

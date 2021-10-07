@@ -28,4 +28,6 @@ public interface MapperTop<P,V> {
     List<P> selectList(@Param("sqlWrapper") QuerySqlWrapper<P> querySqlWrapper);
 
     Integer count(@Param("sqlWrapper") QuerySqlWrapper<P> querySqlWrapper);
+
+    P selectOne(@Param("sqlWrapper") QuerySqlWrapper<P> querySqlWrapper);
 }

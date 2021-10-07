@@ -20,6 +20,7 @@ public interface SqlInjector {
      * @param mapperClass mapper接收的class对象
      * @param builderAssistant mapper信息
      * @param genericList 泛型集合
+     * @param tableInfo 表信息
      */
     void inspectInject(Class<?> mapperClass, MapperBuilderAssistant builderAssistant,
                        List<Class<?>> genericList, TableInfo tableInfo);

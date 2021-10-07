@@ -17,6 +17,7 @@ public enum SqlMethodEnums {
     INSERT_ONE("insertOne","单个添加","<script>insert into %s %s values %s</script>"),
     DELETE_ONE("deleteOne","批量删除","DELETE FROM %s WHERE %s=#{%s}"),
     UPDATE_ONE("updateOne","单个更新","<script>update %s SET %s WHERE %s=#{%s}</script>"),
+    SELECT_ONE("selectOne","单个条件查询","<script>select %s FROM %s %s limit 1</script>"),
 
     COUNT("count","条件统计数量","<scrip> SELECT count(1) FROM %s %s</script> "),
     SELECT_LIST("selectList","查询集合","<script>SELECT %s FROM %s %s</script>");
