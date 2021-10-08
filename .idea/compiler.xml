@@ -10,7 +10,6 @@
         <module name="cache" />
         <module name="util" />
         <module name="common" />
-        <module name="workflow" />
         <module name="mybatis" />
         <module name="toPay" />
         <module name="codeGenerate" />
@@ -26,6 +25,7 @@
       <module name="SpringFramework" target="1.8" />
       <module name="SpringTest" target="1.8" />
       <module name="user-common" target="13" />
+      <module name="workflow" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
