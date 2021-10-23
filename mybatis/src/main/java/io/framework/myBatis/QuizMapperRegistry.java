@@ -38,7 +38,7 @@ public class QuizMapperRegistry extends MapperRegistry {
             //是否存在
             if (hasMapper(type)) {
                 return;
-            }
+            } 
             //用于判断是否注入完成
             boolean loadCompleted = true;
             try {
