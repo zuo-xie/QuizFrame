@@ -4,6 +4,7 @@ import io.framework.myBatis.comment.TableInfo;
 import io.framework.myBatis.injector.AbstractMethod;
 import io.framework.myBatis.injector.SqlMethodEnums;
 import io.framework.myBatis.type.MyBatisStringPool;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 

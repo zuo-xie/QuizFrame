@@ -8,12 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * 一些声明信息
- * Description:  
- * date: 2021/2/13 16:04 
  *
- * @author zuo  
- * @since JDK 1.8
+ * @author zuo
  */
 public class DefaultSqlInjector extends SqlInjectorImpl {
     @Override
@@ -24,6 +20,7 @@ public class DefaultSqlInjector extends SqlInjectorImpl {
                 new DeleteOne(),
                 new UpdateOne(),
                 new SelectList(),
+                new SelectOne(),
                 new Count()
         ).collect(Collectors.toList());
     }
