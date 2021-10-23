@@ -13,9 +13,7 @@
         <module>common</module>
         <module>util</module>
         <module>docker</module>
-        <module>toPay</module>
         <module>mybatis</module>
-        <module>codeGenerate</module>
         <module>cache</module>
     </modules>
 

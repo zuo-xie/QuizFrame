@@ -11,12 +11,11 @@
         <module name="util" />
         <module name="common" />
         <module name="mybatis" />
-        <module name="toPay" />
-        <module name="codeGenerate" />
         <module name="docker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="codeGenerate" target="8" />
       <module name="Jdk" target="13" />
       <module name="QuizFrame-biz" target="1.8" />
       <module name="QuizFrame-common" target="1.8" />
@@ -24,6 +23,7 @@
       <module name="QuizMyBatis" target="1.8" />
       <module name="SpringFramework" target="1.8" />
       <module name="SpringTest" target="1.8" />
+      <module name="toPay" target="8" />
       <module name="user-common" target="13" />
       <module name="workflow" target="8" />
     </bytecodeTargetLevel>
