@@ -8,5 +8,19 @@
       <jdbc-url>jdbc:mysql://47.114.189.73:3307</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="zuadrtest@rm-bp1rqnfc769j0f1o70o.mysql.rds.aliyuncs.com" uuid="e7b8f724-c5b4-49fe-a5ca-c6a0f9a5763e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rm-bp1rqnfc769j0f1o70o.mysql.rds.aliyuncs.com:3306/zuadrtest</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ycwftest@rm-bp1rqnfc769j0f1o70o.mysql.rds.aliyuncs.com" uuid="92d9bdb4-43ab-4842-85d5-f352fbc9d39a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rm-bp1rqnfc769j0f1o70o.mysql.rds.aliyuncs.com:3306/ycwftest</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

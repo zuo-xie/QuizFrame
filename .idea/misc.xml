@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/SpringFramework/pom.xml" />
         <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
         <option value="$PROJECT_DIR$/codeGenerate/pom.xml" />
+        <option value="$PROJECT_DIR$/docker/pom.xml" />
+        <option value="$PROJECT_DIR$/http/pom.xml" />
         <option value="$PROJECT_DIR$/toPay/pom.xml" />
         <option value="$PROJECT_DIR$/user-common/pom.xml" />
       </set>
